@@ -17,8 +17,13 @@ export type OwnedGamesGame = {
     readonly playtime_linux_forever: number;
 };
 
-export type OwnedGamesResponse = {
+export type OwnedGamesDetail = {
 
     readonly game_count: number;
     readonly games: OwnedGamesGame[];
+};
+
+export type OwnedGamesResponse = {
+
+    readonly response: OwnedGamesDetail;
 };
