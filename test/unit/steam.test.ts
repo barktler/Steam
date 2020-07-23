@@ -11,12 +11,11 @@ import { SteamAPI } from "../../src";
 
 describe('Given {ExampleAPI} Class', (): void => {
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const chance: Chance.Chance = new Chance('barktler-steam-steam');
 
     it('should be able to construct', (): void => {
 
-        const api: SteamAPI = SteamAPI.create();
+        const api: SteamAPI = SteamAPI.create(chance.string());
 
         expect(api).to.be.instanceOf(SteamAPI);
     });
