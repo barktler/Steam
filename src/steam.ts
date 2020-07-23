@@ -5,7 +5,7 @@
  */
 
 import { BarktlerCore } from "@barktler/core";
-import { OwnedGamesResponse } from "./declare/owned-games";
+import { OwnedGamesDetail, OwnedGamesResponse } from "./declare/owned-games";
 
 export class SteamAPI extends BarktlerCore {
 
@@ -23,7 +23,7 @@ export class SteamAPI extends BarktlerCore {
         this._apiKey = apiKey;
     }
 
-    public async getOwnedGames(steamId: number): Promise<OwnedGamesResponse> {
+    public async getOwnedGames(steamId: number): Promise<OwnedGamesDetail> {
 
         const response: OwnedGamesResponse = await this._sendRequest({
 
@@ -36,7 +36,6 @@ export class SteamAPI extends BarktlerCore {
                 include_played_free_games: 'true',
             },
         });
-
-        return response;
+        return response.response;
     }
 }
