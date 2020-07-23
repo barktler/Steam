@@ -1,0 +1,6 @@
+GET https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/
+    ?key=<steam-api-key>
+    &steamid=<steam-id>
+    &include_appinfo=true
+    &include_played_free_games=true
+content-type: application/json
