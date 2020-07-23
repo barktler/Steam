@@ -23,7 +23,7 @@ export class SteamAPI extends BarktlerCore {
         this._apiKey = apiKey;
     }
 
-    public async getOwnedGames(steamId: number): Promise<OwnedGamesDetail> {
+    public async getOwnedGames(steamId: string): Promise<OwnedGamesDetail> {
 
         const response: OwnedGamesResponse = await this._sendRequest({
 

@@ -18,6 +18,10 @@ build:
 	@echo "[INFO] Building for production"
 	@NODE_ENV=production $(tsc) --p $(build)
 
+run-example:
+	@echo "[INFO] Running Example $(FILE)"
+	@NODE_ENV=development $(ts_node) --project $(dev) example/$(FILE).ts
+
 tests:
 	@echo "[INFO] Testing with Mocha"
 	@NODE_ENV=test \
