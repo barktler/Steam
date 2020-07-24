@@ -1,5 +1,5 @@
 {
-  "name": "@barktler/steam",
+  "name": "@barktler-api/steam",
   "version": "1.0.0",
   "description": ":speech_balloon: Steam APIs",
   "repository": {
