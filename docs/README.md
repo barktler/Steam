@@ -6,3 +6,11 @@
 [![downloads](https://img.shields.io/npm/dm/@barktler-api/steam.svg)](https://www.npmjs.com/package/@barktler-api/steam)
 
 :speech_balloon: Steam APIs
+
+## Install
+
+```sh
+yarn add @barktler-api/steam
+# Or
+npm install @barktler-api/steam --save
+```
