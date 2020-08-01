@@ -14,3 +14,5 @@ yarn add @barktler-api/steam
 # Or
 npm install @barktler-api/steam --save
 ```
+
+## Usage
