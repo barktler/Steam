@@ -5,6 +5,7 @@
  */
 
 import { BarktlerCore } from "@barktler/core";
+import { axiosDriver } from "@barktler/driver-axios";
 import { OwnedGamesDetail, OwnedGamesResponse } from "./declare/owned-games";
 
 export class SteamAPI extends BarktlerCore {
@@ -20,6 +21,7 @@ export class SteamAPI extends BarktlerCore {
 
         super();
 
+        super.useDriver(axiosDriver);
         this._apiKey = apiKey;
     }
 

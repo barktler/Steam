@@ -4,7 +4,7 @@
   "description": ":speech_balloon: Steam APIs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/barktler/Steam.git"
+    "url": "git+https://github.com/barktler/API-Steam.git"
   },
   "keywords": [
     "API"
@@ -12,11 +12,12 @@
   "author": "WMXPY",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/barktler/Steam/issues"
+    "url": "https://github.com/barktler/API-Steam/issues"
   },
-  "homepage": "https://github.com/barktler/Steam#readme",
+  "homepage": "https://github.com/barktler/API-Steam#readme",
   "dependencies": {
-    "@barktler/core": "^1.1.0"
+    "@barktler/core": "^1.2.1",
+    "@barktler/driver-axios": "^1.0.0"
   },
   "devDependencies": {
     "@sudoo/io": "^1.8.0",
