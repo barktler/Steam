@@ -16,3 +16,15 @@ npm install @barktler-api/steam --save
 ```
 
 ## Usage
+
+```ts
+import { OwnedGamesDetail, SteamAPI } from "@barktler-api/steam";
+
+(async () => {
+
+    const steamApi: SteamAPI = SteamAPI.create('<Steam API Key>');
+    const detail: OwnedGamesDetail = await steamApi.getOwnedGames('<Steam ID>');
+
+    console.log(detail);
+})();
+```
