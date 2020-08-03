@@ -5,11 +5,12 @@
  * @override Unit
  */
 
+import { Barktler } from "@barktler/core";
 import { expect } from "chai";
 import * as Chance from "chance";
 import { SteamAPI } from "../../src";
 
-describe('Given {ExampleAPI} Class', (): void => {
+describe('Given {SteamAPI} Class', (): void => {
 
     const chance: Chance.Chance = new Chance('barktler-steam-steam');
 
@@ -18,5 +19,6 @@ describe('Given {ExampleAPI} Class', (): void => {
         const api: SteamAPI = SteamAPI.create(chance.string());
 
         expect(api).to.be.instanceOf(SteamAPI);
+        expect(api).to.be.instanceOf(Barktler);
     });
 });
