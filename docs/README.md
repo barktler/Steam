@@ -11,14 +11,45 @@
 
 ```sh
 yarn add @barktler-api/steam
+yarn add @barktler/core # Peer Dependency
 # Or
 npm install @barktler-api/steam --save
+npm install @barktler/core --save # Peer Dependency
+```
+
+A request driver is also required, here we install and use the `axios` driver for example.
+
+```sh
+yarn add @barktler/driver-axios
+# Or
+npm install @barktler/driver-axios --save
 ```
 
 ## Usage
 
 ```ts
+import { axiosDriver } from "@barktler/driver-axios";
 import { OwnedGamesDetail, SteamAPI } from "@barktler-api/steam";
+
+(async () => {
+
+    const steamApi: SteamAPI = SteamAPI.create('<Steam API Key>');
+    steamApi.useDriver(axiosDriver);
+
+    const detail: OwnedGamesDetail = await steamApi.getOwnedGames('<Steam ID>');
+
+    console.log(detail);
+})();
+```
+
+You can also declare a default driver for global request
+
+```ts
+import { Barktler } from "@barktler/core";
+import { axiosDriver } from "@barktler/driver-axios";
+import { OwnedGamesDetail, SteamAPI } from "../src";
+
+Barktler.useGlobalDefaultDriver(axiosDriver);
 
 (async () => {
 
