@@ -47,7 +47,7 @@ You can also declare a default driver for global request
 ```ts
 import { Barktler } from "@barktler/core";
 import { axiosDriver } from "@barktler/driver-axios";
-import { OwnedGamesDetail, SteamAPI } from "../src";
+import { OwnedGamesDetail, SteamAPI } from "@barktler-api/steam";
 
 Barktler.useGlobalDefaultDriver(axiosDriver);
 
