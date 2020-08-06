@@ -20,7 +20,7 @@ export class SteamAPI {
         this._apiKey = apiKey;
     }
 
-    public get ownedGames(): SteamOwnedGamesAPI {
+    public createOwnedGamesAPI(): SteamOwnedGamesAPI {
 
         return SteamOwnedGamesAPI.create(this._apiKey);
     }

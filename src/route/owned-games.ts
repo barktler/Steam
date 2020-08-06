@@ -24,7 +24,7 @@ export class SteamOwnedGamesAPI extends Barktler<any, OwnedGamesResponse> {
         super._declareResponseDataPattern(OwnedGamesResponsePattern);
     }
 
-    public async getOwnedGames(steamId: string): Promise<OwnedGamesDetail> {
+    public async fetchBySteamId(steamId: string): Promise<OwnedGamesDetail> {
 
         const response: OwnedGamesResponse = await this._sendRequest({
 
