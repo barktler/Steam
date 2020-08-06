@@ -5,13 +5,13 @@
  */
 
 import { Barktler } from "@barktler/core";
-import { OwnedGamesDetail, OwnedGamesResponse } from "./declare/owned-games";
+import { OwnedGamesDetail, OwnedGamesResponse, OwnedGamesResponsePattern } from "./declare/owned-games";
 
-export class SteamAPI extends Barktler {
+export class SteamOwnedGamesAPI extends Barktler<any, OwnedGamesResponse> {
 
-    public static create(apiKey: string): SteamAPI {
+    public static create(apiKey: string): SteamOwnedGamesAPI {
 
-        return new SteamAPI(apiKey);
+        return new SteamOwnedGamesAPI(apiKey);
     }
 
     private readonly _apiKey: string;
@@ -21,6 +21,7 @@ export class SteamAPI extends Barktler {
         super();
 
         this._apiKey = apiKey;
+        super._declareResponseDataPattern(OwnedGamesResponsePattern);
     }
 
     public async getOwnedGames(steamId: string): Promise<OwnedGamesDetail> {
