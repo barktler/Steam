@@ -5,5 +5,6 @@
  */
 
 export * from "./declare/owned-games";
+export * from "./route/owned-games";
 export * from "./steam";
 

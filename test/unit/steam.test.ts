@@ -19,6 +19,12 @@ describe('Given {SteamAPI} Class', (): void => {
         const api: SteamAPI = SteamAPI.create(chance.string());
 
         expect(api).to.be.instanceOf(SteamAPI);
-        expect(api).to.be.instanceOf(Barktler);
+    });
+
+    it('should be able to construct owned games', (): void => {
+
+        const api: SteamAPI = SteamAPI.create(chance.string());
+
+        expect(api.ownedGames).to.be.instanceOf(Barktler);
     });
 });
