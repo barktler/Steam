@@ -18,7 +18,6 @@
   "peerDependencies": {
     "@barktler/core": "*"
   },
-  "dependencies": {},
   "devDependencies": {
     "@barktler/core": "^1.7.0",
     "@barktler/driver-axios": "^1.2.0",
