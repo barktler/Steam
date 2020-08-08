@@ -20,8 +20,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@barktler/core": "^1.6.0",
-    "@barktler/driver-axios": "^1.1.0",
+    "@barktler/core": "^1.7.0",
+    "@barktler/driver-axios": "^1.2.0",
     "@sudoo/io": "^1.8.0",
     "@sudoo/triforce": "^2.7.11"
   },
