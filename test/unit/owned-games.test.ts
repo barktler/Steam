@@ -6,6 +6,7 @@
  */
 
 import { Barktler } from "@barktler/core";
+import { mockDriver } from "@barktler/driver-mock";
 import { expect } from "chai";
 import * as Chance from "chance";
 import { OwnedGamesDetail, SteamOwnedGamesAPI } from "../../src";
@@ -25,7 +26,7 @@ describe('Given {SteamOwnedGamesAPI} Class', (): void => {
     it('should be able to fetch mock data', async (): Promise<void> => {
 
         const api: SteamOwnedGamesAPI = SteamOwnedGamesAPI.create(chance.string());
-        api.useMockDriver();
+        api.useDriver(mockDriver);
 
         const response: OwnedGamesDetail = await api.fetchBySteamId(chance.string());
 
