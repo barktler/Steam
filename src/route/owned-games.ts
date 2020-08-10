@@ -26,7 +26,7 @@ export class SteamOwnedGamesAPI extends Barktler<any, OwnedGamesResponse> {
 
     public async fetchBySteamId(steamId: string): Promise<OwnedGamesDetail> {
 
-        const response: OwnedGamesResponse = await this._sendRequest({
+        const response: OwnedGamesResponse = await this._requestForData({
 
             url: 'https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/',
             method: 'GET',
