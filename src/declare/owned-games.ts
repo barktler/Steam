@@ -5,7 +5,7 @@
  * @description Owned Games
  */
 
-import { Pattern } from "@sudoo/pattern"
+import { Pattern } from "@sudoo/pattern";
 
 export type OwnedGamesGame = {
 
