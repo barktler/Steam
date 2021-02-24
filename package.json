@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@barktler/core": "^2.1.0",
-    "@barktler/driver-axios": "^2.0.0",
+    "@barktler/driver-axios": "^4.0.0",
     "@barktler/driver-mock": "^2.0.0",
     "@sudoo/io": "^1.8.0",
     "@sudoo/triforce": "^2.8.2"
