@@ -1,0 +1,26 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: "@sudoo/triforce"
+    versions:
+    - 2.9.16
+    - 2.9.17
+    - 2.9.18
+    - 2.9.20
+    - 2.9.21
+    - 2.9.22
+  - dependency-name: "@barktler/core"
+    versions:
+    - 2.10.0
+  - dependency-name: "@barktler/driver-axios"
+    versions:
+    - 3.0.1
+  - dependency-name: "@barktler/driver-mock"
+    versions:
+    - 3.0.2
